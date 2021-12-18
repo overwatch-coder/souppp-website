@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;700&family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@300;400;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+/* Navbar Section */
+#main-nav{
+    background-color: #ffff;
+}
+
+#main-nav .navbar-brand{
+    font-weight: 700;
+    color: #28293D;
+}
+
+#main-nav .nav-link{
+    color: #28293D;
+    font-weight: 500;
+    margin: 8px 10px !important;
+}
+
+/* Showcase Section  */
+#showcase{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), 
+    url("/assets/table-2879213_640 1.png");
+    margin-top: 120px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+}
+
+#showcase .showcase-header{
+   padding-top: 230px !important;
+}
+
+#showcase .showcase-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#showcase .showcase-form .input-group input{
+    background-color: transparent;
+    color: #ffff !important;
+    border: 2px solid #ffff;
+}
+
+#showcase .showcase-form .input-group input::placeholder{
+    color: rgb(241, 240, 240);
+    opacity: 1;
+}
+
+#showcase .showcase-form .input-group input:focus{
+    box-shadow: none;
+    border: 1px solid #ffff;
+}
+
+/* How It Works Section */
+#how-it-works .card-div{
+    background: #FEFBF8 !important;
+}
+
+#how-it-works .cards .cards-h5{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#how-it-works .cards .card-p{
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
+/* Footer Section */
+#footer{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), 
+    url("/assets/footer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#footer input{
+    background-color: transparent;
+    border: 2px solid #FB7806;
+}
+
+#footer input::placeholder{
+    color: #ffff;
+    opacity: 1;
+}
+
+#footer input:focus{
+    border: 2px solid #FB7806;
+    outline: none;
+    box-shadow: none;
+}
