@@ -18,6 +18,11 @@ body{
     background-color: #ffff;
 }
 
+#main-nav #nav-button:focus{
+    box-shadow: none;
+}
+
+
 #main-nav .navbar-brand{
     font-weight: 700;
     color: #28293D;
@@ -27,6 +32,12 @@ body{
     color: #28293D;
     font-weight: 500;
     margin: 8px 10px !important;
+    transition: color 0.3s ease-in-out;
+}
+
+#main-nav .nav-link:hover{
+    color: #FB7806;
+    transition: color 0.3s ease-in-out;
 }
 
 /* Showcase Section  */
@@ -93,6 +104,16 @@ body{
     background-position: center;
 }
 
+.footer-nav .nav-link{
+    color: #ffff;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-nav .nav-link:hover{
+    color: #FB7806;
+    transition: color 0.3s ease-in-out;
+}
+
 #footer input{
     background-color: transparent;
     border: 2px solid #FB7806;
@@ -107,4 +128,48 @@ body{
     border: 2px solid #FB7806;
     outline: none;
     box-shadow: none;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 760px) {
+    /* Navbar Section */
+    #main-nav .register{
+        width: 50%;
+    }
+
+    /* Showcase Section */
+    #showcase .input-group{
+        width: 90% !important;
+    }
+
+    #showcase .showcase-header{
+        padding-top: 150px !important;
+        font-size: 27px !important;
+     }
+
+     #showcase .showcase-p{
+        font-size: 13px !important;
+     }
+
+     #showcase .showcase-form .input-group input::placeholder{
+        font-size: 12px;
+    }
+
+    /* How It Works Section */
+    #how-it-works .cards img{
+        width: 15%;
+    }
+
+    /* Footer Section */
+    #footer .navbar-brand-footer-image{
+        width: 50% !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #main-nav .register{
+        width: 95%;
+    }
+     
 }
