@@ -1,0 +1,166 @@
+@import "default";
+@import "allMixins";
+@import "variables";
+
+/* For Index.html */
+
+/* Navbar Section */
+#main-nav{
+    background-color: $whiteColor;
+    #nav-button:focus{
+        box-shadow: none;
+    }
+    .navbar-brand{
+        font-weight: 700;
+        color: #28293D;
+    }
+    .nav-link{
+        color: #28293D;
+        font-weight: 500;
+        margin: 8px 10px !important;
+        transition: color 0.3s ease-in-out;
+        &:hover{
+            color: $orangeColor;
+            transition: color 0.3s ease-in-out;
+        }
+    }
+}
+
+
+/* Showcase Section  */
+#showcase{
+    @include backgroundImage("/assets/table-2879213_640 1.png");
+    margin-top: 120px;
+    height: 100vh;
+    background-attachment: scroll;
+    .showcase-header{
+        padding-top: 230px !important;
+     }
+     .showcase-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .input-group input{
+        background-color: transparent;
+        color: $whiteColor !important;
+        border: 2px solid $whiteColor;
+        @include placeHolder(rgb(241, 240, 240));
+        @include onFocus();
+    }
+    button{
+        @include onFocus();
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+}
+
+/* How It Works Section */
+#how-it-works{
+    .card-div{
+        background: #FEFBF8 !important;
+    }
+    .cards-h5{
+        font-weight: 600;
+        font-size: 24px;
+    }
+    .card-p{
+        font-weight: normal;
+        font-size: 14px;
+    }
+} 
+
+
+/* Footer Section */
+#footer{
+    @include backgroundImage("/assets/footer.png");
+    .footer-nav{
+        .nav-link{
+            color: $whiteColor;
+            transition: color 0.3s ease-in-out;
+            &:hover{
+                color: $orangeColor;
+                transition: color 0.3s ease-in-out;
+            }
+        }
+    }
+    .input-group{
+        input{
+            background-color: transparent;
+            border: 2px solid $orangeColor;
+            @include placeHolder($whiteColor);
+            @include onFocus();
+        } 
+
+    }
+}
+
+
+/* For Order.html */
+
+/* Side Nav-Bar */
+header{
+    position: relative;
+    #open{
+        z-index: 10;
+        position: fixed;
+        transition: all 1s ease-in-out;
+    }
+
+
+     #side-navbar{
+        width: $width;
+        background-color: rgba(254, 251, 248, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        overflow-x: hidden;
+        transition: all 1s ease-in-out;
+        #close{
+            transition: all 1s ease-in-out;
+        }
+
+        nav{
+            .nav-link {
+                img{
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                a{
+                    &:hover{
+                        color: $orangeColor !important;
+                        cursor: pointer;
+                        font-weight: 500 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Main Section */
+#main-content{
+    margin-left: 10%;
+    margin-top: 50px !important;
+    padding: 10px 5px;
+    position: relative;
+    height: 100%;
+    width: (100% - $width);
+    overflow-x: hidden;
+    transition: all 1s ease-in-out;
+
+    button, input{
+        @include onFocus();
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+}
+
+@import "mediaQueries";

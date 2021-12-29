@@ -1,0 +1,21 @@
+@mixin backgroundImage($url) {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), 
+    url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin onFocus{
+    &:focus{
+    outline: none;
+    box-shadow: none;
+    }
+}
+
+@mixin placeHolder($placeHolderColor){
+    &::placeholder{
+        color: $placeHolderColor !important;
+        opacity: 1;
+    }
+}
