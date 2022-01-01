@@ -186,65 +186,130 @@ body {
 
 /* For Order.html */
 /* Side Nav-Bar */
-header {
-  position: relative;
-}
-
-header #open {
-  z-index: 10;
-  position: fixed;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
-
-header #side-navbar {
-  width: 15%;
-  background-color: rgba(254, 251, 248, 0.5);
+#order-header {
+  width: 250px;
+  background-color: rgba(240, 239, 239, 0.4);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  right: 0;
   overflow-x: hidden;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
 }
 
-header #side-navbar #close {
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+#order-header #side-nav-links .nav-item {
+  font-size: 15px;
 }
 
-header #side-navbar nav .nav-link img:hover {
+#order-header #side-nav-links .nav-item:hover a {
   cursor: pointer;
-}
-
-header #side-navbar nav .nav-link a:hover {
   color: #FB7806 !important;
-  cursor: pointer;
-  font-weight: 500 !important;
 }
 
-/* Main Section */
-#main-content {
-  margin-left: 10%;
-  margin-top: 50px !important;
-  padding: 10px 5px;
-  position: relative;
-  height: 100%;
-  width: 85%;
-  overflow-x: hidden;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+#order-header #side-nav-links .nav-item img {
+  width: 20%;
+  margin-bottom: 5px;
 }
 
-#main-content button:focus, #main-content input:focus {
+#main-content-order .welcome-user input:focus {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-#main-content button:hover, #main-content input:hover {
-  opacity: 0.9;
+#main-content-order .masked-image {
+  background-color: #FB7806;
+  background-image: url("/assets/pepper.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  border-radius: 30px;
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+}
+
+#main-content-order .masked-image button:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#main-content-order .masked-image:hover {
+  -webkit-transform: skew(-10deg);
+          transform: skew(-10deg);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+}
+
+#main-content-order .customize-meal img {
+  border-radius: 50%;
+  border: 5px solid #FB7806;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#main-content-order .customize-meal img:hover {
+  border: 10px solid #FB7806;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#main-content-order .customize-meal a:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#main-content-order .view-all-meals a {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#main-content-order .view-all-meals a:hover {
+  color: #FB7806 !important;
+  text-decoration: underline !important;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#main-content-order .view-all-meals .custom-meal {
+  border-radius: 30px;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+#main-content-order .view-all-meals .custom-meal span {
+  color: #FB7806 !important;
+}
+
+#main-content-order .view-all-meals .custom-meal:hover {
+  background-color: #FB7806;
+  color: #ffff;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+#main-content-order .view-all-meals .custom-meal:hover span {
+  color: #ffff !important;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+#main-content-order .view-all-meals .custom-meal:hover img {
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#side-bar-order {
+  background-color: rgba(240, 239, 239, 0.3);
 }
 
 /* Media Queries */
@@ -289,20 +354,6 @@ header #side-navbar nav .nav-link a:hover {
 @media screen and (max-width: 500px) {
   #main-nav .register {
     width: 95%;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  header #side-navbar {
-    left: -500px;
-    width: 100%;
-    background-color: #fefbf8;
-  }
-  header #main-content {
-    margin-left: 0;
-    margin-top: 50px !important;
-    height: 100%;
-    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

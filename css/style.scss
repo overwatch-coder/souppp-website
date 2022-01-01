@@ -101,66 +101,105 @@
 /* For Order.html */
 
 /* Side Nav-Bar */
-header{
-    position: relative;
-    #open{
-        z-index: 10;
-        position: fixed;
-        transition: all 1s ease-in-out;
+#order-header{
+    width: 250px;
+    background-color: rgba(240, 239, 239, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    #side-nav-links{
+        .nav-item{
+            font-size: 15px;
+            &:hover a{
+                cursor: pointer;
+                    color: $orangeColor !important;
+            }
+            img{
+                width: 20%;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+#main-content-order{
+    .welcome-user{
+        input{
+            @include onFocus();
+        }
     }
 
-
-     #side-navbar{
-        width: $width;
-        background-color: rgba(254, 251, 248, 0.5);
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 10;
-        overflow-x: hidden;
-        transition: all 1s ease-in-out;
-        #close{
-            transition: all 1s ease-in-out;
+    .masked-image{
+        background-color: $orangeColor;
+        background-image: url("/assets/pepper.png");
+        background-repeat: no-repeat;
+        background-position-x: right;
+        border-radius: 30px;
+        transition: transform 0.5s ease-in;
+        button{
+            @include onFocus();
         }
+        &:hover{
+            transform: skew(-10deg);
+            transition: transform 0.5s ease-in;
+        }
+    }
 
-        nav{
-            .nav-link {
-                img{
-                    &:hover{
-                        cursor: pointer;
-                    }
+    .customize-meal{
+        img{
+            border-radius: 50%; 
+            border: 5px solid#FB7806;
+            transition: all 0.5s ease-in-out;
+            &:hover{
+                border: 10px solid #FB7806;
+                transition: all 0.5s ease-in-out;
+                transform: scale(1.2);
+            }
+        }
+        a{
+            @include onFocus();
+        }
+    }
+
+    .view-all-meals{
+        a{
+            transition: all 0.5s ease-in-out;
+            &:hover{
+                color: $orangeColor !important;
+                text-decoration: underline !important;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+        .custom-meal{
+            border-radius: 30px;
+            transition: all 0.5s ease-in;
+            span{
+                color: #FB7806 !important;
+            }
+
+            &:hover{
+                background-color: $orangeColor;
+                color: $whiteColor;
+                transition: all 0.5s ease-in;
+                span{
+                    color:$whiteColor !important;
+                    border-radius: 20%;
+                    cursor: pointer;
                 }
-                a{
-                    &:hover{
-                        color: $orangeColor !important;
-                        cursor: pointer;
-                        font-weight: 500 !important;
-                    }
+                img{
+                    transition: transform 0.5s ease-in-out;
+                    transform: scale(1.05);
                 }
             }
         }
     }
 }
 
-
-
-/* Main Section */
-#main-content{
-    margin-left: 10%;
-    margin-top: 50px !important;
-    padding: 10px 5px;
-    position: relative;
-    height: 100%;
-    width: (100% - $width);
-    overflow-x: hidden;
-    transition: all 1s ease-in-out;
-
-    button, input{
-        @include onFocus();
-        &:hover{
-            opacity: 0.9;
-        }
-    }
+#side-bar-order{
+    background-color: rgba(240, 239, 239, 0.3);
 }
+
 
 @import "mediaQueries";
