@@ -10,44 +10,39 @@
     <title>Order - Customize Your Meal</title>
 </head>
 <body>
-    <div class="container-fluid position-relative">
-       <div class="row justify-content-between">
-
-           <!-- Side-Navbar Section -->
-           <div class="col-12 col-md-2">
-            <header id="order-header" class="mt-1 pt-1">
-                <nav class="navbar navbar-light mt-2 pt-3 mx-4">
-                    <div class="navbar-brand d-block mx-auto">
-                        <img src="/assets/soup-svgrepo-com(1) 1.png" alt="navbar-brand" class="navbar-brand img-fluid">
-                        <span class="navbar-brand fs-5 fw-bold d-block" style="color: #FB7806;">Souppp</span>
-                    </div>
-
-                    <ul class="navbar-nav mt-1 pt-2 d-block mx-auto" id="side-nav-links">
-                        <div class="d-block">
-                            <li class="nav-item d-flex flex-row mb-4">
-                                <img src="/assets/home-svgrepo-com(2) 1.svg" alt="home">
-                                <a href="#" class="nav-link text-dark ms-2 fw-light">Home</a>
-                            </li>
-                            <li class="nav-item d-flex flex-row mb-4">
-                                <img src="/assets/order (2).png" alt="order">
-                                <a href="#" class="nav-link text-dark ms-2 fw-light">Order</a>
-                            </li>
-                            <li class="nav-item d-flex flex-row mb-4">
-                                <img src="/assets/favourite-svgrepo-com 1.svg" alt="Favourite">
-                                <a href="#" class="nav-link text-dark ms-2 fw-light">Favourite</a>
-                            </li>
-                            <li class="nav-item d-flex flex-row mb-4">
-                                <img src="/assets/gps-signal-svgrepo-com 1.svg" alt="Track Order">
-                                <a href="#" class="nav-link text-dark ms-2 fw-light">Track Order</a>
-                            </li>
-                            <li class="nav-item d-flex flex-row mb-4">
-                                <img src="/assets/contact-card-svgrepo-com 1.svg" alt="Contact">
-                                <a href="#" class="nav-link text-dark ms-2 fw-light">Contact</a>
-                            </li>
-                            <li class="nav-item d-flex flex-row mt-3 pt-3">
-                                <img src="/assets/log-out-svgrepo-com 1.svg" alt="Log Out">
-                                <a href="#" class="nav-link text-dark ms-2 fw-light">Log Out</a>
-                            </li>
+    <!-- Side-Navbar Section -->
+    <header id="order-header" class="mt-1 pt-1">
+        <nav class="navbar navbar-light mt-2 pt-3 mx-4">
+            <div class="navbar-brand d-block mx-auto">
+                <img src="/assets/soup-svgrepo-com(1) 1.png" alt="navbar-brand" class="navbar-brand img-fluid">
+                <span class="navbar-brand fs-5 fw-bold d-block" style="color: #FB7806;">Souppp</span>
+            </div>
+            <ul class="navbar-nav mt-1 pt-2 d-block mx-auto" id="side-nav-links">
+                <div class="d-block">
+                    <li class="nav-item d-flex flex-row mb-4">
+                        <img src="/assets/home-svgrepo-com(2) 1.svg" alt="home">
+                        <a href="index.html" class="nav-link text-dark ms-2 fw-light">Home</a>
+                    </li>
+                    <li class="nav-item d-flex flex-row mb-4">
+                        <img src="/assets/order (2).png" alt="order">
+                        <a href="order.html" class="nav-link text-dark ms-2 fw-light">Order</a>
+                    </li>
+                    <li class="nav-item d-flex flex-row mb-4">
+                        <img src="/assets/favourite-svgrepo-com 1.svg" alt="Favourite">
+                        <a href="#" class="nav-link text-dark ms-2 fw-light">Favourite</a>
+                    </li>
+                    <li class="nav-item d-flex flex-row mb-4">
+                        <img src="/assets/gps-signal-svgrepo-com 1.svg" alt="Track Order">
+                        <a href="#" class="nav-link text-dark ms-2 fw-light">Track Order</a>
+                    </li>
+                    <li class="nav-item d-flex flex-row mb-4">
+                        <img src="/assets/contact-card-svgrepo-com 1.svg" alt="Contact">
+                        <a href="#" class="nav-link text-dark ms-2 fw-light">Contact</a>
+                    </li>
+                    <li class="nav-item d-flex flex-row mt-3 pt-3">
+                        <img src="/assets/log-out-svgrepo-com 1.svg" alt="Log Out">
+                        <a href="#" class="nav-link text-dark ms-2 fw-light">Log Out</a>
+                    </li>
                         </div>
                     </ul>
                     <img src="/assets/sidebar-img.png" alt="side-bar-img" class="mt-3">
@@ -57,7 +52,9 @@
            <!-- End of Side-Navbar Section -->
 
            <!-- Main Content Section -->
-           <div class="col-12 col-md-7 col-lg-6 mt-3 pt-5" id="main-content-order">
+    <div class="container-fluid position-relative" id="for-main-content">
+        <div class="row justify-content-around">
+           <div class="col-10 col-md-8 mt-3 pt-5" id="main-content-order">
                <main>
                 <div class="row welcome-user justify-content-start justify-content-md-between">
                     <div class="col-10 col-md-6">
@@ -75,7 +72,7 @@
                     <div class="row container justify-content-between">
                         <div class="col-5 col-md-6 g-0 mt-3" style="border-radius: 30px;">
                             <p class="fs-2 text-light fw-bold mt-2">20% Off</p>
-                            <small class="text-light">All Orders above $300 this weekened</small>
+                            <small class="text-light" style="font-size: 13px !important;">All Orders above $300 this weekened</small>
                             <button class="btn btn-light text-dark mb-3 mt-3">Order Now</button>
                         </div>
                     </div>
@@ -152,7 +149,7 @@
            <!-- End of Main Content Section -->
            
            <!-- Article Section -->
-           <div class="col-12 col-md-4 col-lg-3" id="side-bar-order">
+           <div class="col-10 col-md-3" id="side-bar-order">
                <article>
                 <p class="fs-3 fw-bold mt-5 pt-5">Side-bar goes here</p>
                 <br>

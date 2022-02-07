@@ -187,7 +187,7 @@ body {
 /* For Order.html */
 /* Side Nav-Bar */
 #order-header {
-  width: 250px;
+  width: 20%;
   background-color: rgba(240, 239, 239, 0.4);
   position: fixed;
   top: 0;
@@ -208,6 +208,12 @@ body {
 #order-header #side-nav-links .nav-item img {
   width: 20%;
   margin-bottom: 5px;
+}
+
+#for-main-content {
+  margin-left: 250px !important;
+  position: relative;
+  width: 80%;
 }
 
 #main-content-order .welcome-user input:focus {
@@ -235,8 +241,8 @@ body {
 }
 
 #main-content-order .masked-image:hover {
-  -webkit-transform: skew(-10deg);
-          transform: skew(-10deg);
+  -webkit-transform: scale(1.01, 1.02);
+          transform: scale(1.01, 1.02);
   -webkit-transition: -webkit-transform 0.5s ease-in;
   transition: -webkit-transform 0.5s ease-in;
   transition: transform 0.5s ease-in;

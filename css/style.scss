@@ -102,7 +102,7 @@
 
 /* Side Nav-Bar */
 #order-header{
-    width: 250px;
+    width: 20%;
     background-color: rgba(240, 239, 239, 0.4);
     position: fixed;
     top: 0;
@@ -124,6 +124,12 @@
     }
 }
 
+#for-main-content{
+    margin-left: 250px !important;
+    position: relative;
+    width: 100% - 20%;
+}
+
 #main-content-order{
     .welcome-user{
         input{
@@ -142,7 +148,7 @@
             @include onFocus();
         }
         &:hover{
-            transform: skew(-10deg);
+            transform: scale(1.01,1.02);
             transition: transform 0.5s ease-in;
         }
     }
