@@ -52,27 +52,37 @@
            <!-- End of Side-Navbar Section -->
 
            <!-- Main Content Section -->
-    <div class="container-fluid position-relative" id="for-main-content">
-        <div class="row justify-content-around">
-           <div class="col-10 col-md-8 mt-3 pt-5" id="main-content-order">
+    <div class="container" id="for-main-content">
+
+        <div class="cart-icons-lg pt-5 mt-3 d-block d-md-none">
+            <img src="/assets/Group 26.png" alt="cart">
+            <img class="ms-4" src="/assets/Group 27.png" alt="notification">
+        </div>
+
+        <div class="row justify-content-around justify-content-md-center">
+           <div class="col-10 col-md-8 mt-3 pt-5 clear-fix" id="main-content-order">
                <main>
                 <div class="row welcome-user justify-content-start justify-content-md-between">
                     <div class="col-10 col-md-6">
                         <h2 class="fw-normal">Welcome Helen</h2>
                     </div>
                     <div class="col-8 col-md-5">
-                        <div class="input-group">
-                            <input type="search" name="search" placeholder="Search" class="form-control">
-                            <a href="#" class="input-group-text" style="background-color: #FB7806;"><i class="text-light bi bi-search"></i></a>
-                        </div>
+                        <form action="#">
+                            <div class="input-group">
+                                <input type="search" name="search" placeholder="Search" class="form-control">
+                                <button href="#" class="input-group-text" style="background-color: #FB7806;">
+                                    <i class="text-light bi bi-search"></i>
+                                </button>
+                            </div>
+                        </form>
                     </div>
                  </div>
 
                  <section class="container masked-image mt-5">
                     <div class="row container justify-content-between">
-                        <div class="col-5 col-md-6 g-0 mt-3" style="border-radius: 30px;">
+                        <div class="col-5 col-md-6 g-0 mt-3 w-100" style="border-radius: 30px;">
                             <p class="fs-2 text-light fw-bold mt-2">20% Off</p>
-                            <small class="text-light" style="font-size: 13px !important;">All Orders above $300 this weekened</small>
+                            <p class="text-light small" style="font-size: 13px !important;">All Orders above $300 this weekened</p>
                             <button class="btn btn-light text-dark mb-3 mt-3">Order Now</button>
                         </div>
                     </div>
@@ -149,18 +159,58 @@
            <!-- End of Main Content Section -->
            
            <!-- Article Section -->
-           <div class="col-10 col-md-3" id="side-bar-order">
-               <article>
-                <p class="fs-3 fw-bold mt-5 pt-5">Side-bar goes here</p>
-                <br>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati libero voluptatem eaque quasi aliquid, unde velit ullam, officia, perferendis rem dolores eos! Sunt, quasi! Harum officia reiciendis sapiente deleniti architecto?</p>
+           <div class="col-10 col-md-3">
+               <article id="article-side-bar-order">
+
+                <div class="cart-icons pt-5 mt-3 d-none d-md-block">
+                    <img src="/assets/Group 26.png" alt="cart">
+                    <img class="ms-4" src="/assets/Group 27.png" alt="notification">
+                </div>
+
+                <div class="what-is-new">
+                    <h6>What’s New on Our Blog</h6>
+                    <p class="small mt-3"><a href="#" class="text-decoration-none text-dark">Why Vegetables are good for the eyes...</a></p>
+                    <p class="small mt-3"><a href="#" class="text-decoration-none text-dark">Hot Recipe! How to prepare ogbono soup with just #5000..... </a></p>
+                    <p class="small mt-3"><a href="#" class="text-decoration-none text-dark">My Favourite Igbo meals and how to prepare them and serve them...</a></p>
+                </div>
+                <p>
+                    <hr>
+                </p>
+
+                <div class="recent-orders">
+                    <h6>Recent Orders</h6>
+                    <p class="small mt-3">
+                        <a href="#" class="text-decoration-none text-dark">Egusi + Pounded Yam</a>
+                        <br>
+                        <small class="pt-1">
+                            <span class="text-muted">$3.50</span>
+                            <span class="text-muted float-end">2 days ago</span>
+                        </small>
+                    </p>
+                    <p class="small mt-3">
+                        <a href="#" class="text-decoration-none text-dark">Ewedu Soup + Amala</a>
+                        <br>
+                        <small class="pt-1">
+                            <span class="text-muted">$4.00</span>
+                            <span class="text-muted float-end">12/01/2022</span>
+                        </small>
+                    </p>
+                    <p class="small mt-3">
+                        <a href="#" class="text-decoration-none text-dark">Pepper Soup</a>
+                        <br>
+                        <small class="pt-1">
+                            <span class="text-muted">$2.00</span>
+                            <span class="text-muted float-end">16/01/2022</span>
+                        </small>
+                    </p>
+                    <button class="btn btn-lg mt-3 rounded-3 form-control">View all</button>
+                </div>
+
                </article>
            </div>
            <!-- End of article Section -->
        </div> 
     </div>
-    
-    
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
