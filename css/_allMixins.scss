@@ -19,3 +19,15 @@
         opacity: 1;
     }
 }
+
+@mixin menuIcons($color){
+    i{
+        cursor: pointer;
+        font-size: 30px;
+        color: #353332;
+        &:hover{
+            color: $color;
+        }
+    }
+    
+}

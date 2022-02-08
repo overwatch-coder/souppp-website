@@ -109,6 +109,26 @@
     left: 0;
     right: 0;
     overflow-x: hidden;
+
+    .menu-icons{
+        position: relative;
+        top: 0;
+        left: 0;
+
+        #open-menu-icon{
+            margin: 10px 10px 0 20px;
+            display: none;
+           @include menuIcons($orangeColor);
+        }
+
+        #close-menu-icon{
+            display: none;
+            margin: 50px 13px 0 90%;
+            @include menuIcons($orangeColor);
+        }
+
+    }
+    
     #side-nav-links{
         .nav-item{
             font-size: 15px;
@@ -131,7 +151,6 @@
     overflow-x: hidden;
 
     .cart-icons-lg{
-        float: right;
         img{
             &:hover{
                 background: rgb(245, 241, 241);
@@ -217,19 +236,25 @@
 #article-side-bar-order{
     position: relative;
     background-color: rgba(240, 239, 239, 0.3);
+
     .cart-icons{
-        position: relative;
-        right: -120px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-right: 30px;
+        background-color: #ffffff;
+        z-index: 10;
         img{
             &:hover{
-                background: rgb(245, 241, 241);
+                background: rgb(246, 244, 244);
                 cursor: pointer
             }
         }
     }
 
     .what-is-new, .recent-orders{
-        margin: 70px 0 35px 0;
+        position: relative;
+        margin: 160px 0 35px 0;
         p{
             background-color: #FFF9F4;
             padding: 10px 5px !important;

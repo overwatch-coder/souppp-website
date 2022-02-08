@@ -196,6 +196,42 @@ body {
   overflow-x: hidden;
 }
 
+#order-header .menu-icons {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#order-header .menu-icons #open-menu-icon {
+  margin: 10px 10px 0 20px;
+  display: none;
+}
+
+#order-header .menu-icons #open-menu-icon i {
+  cursor: pointer;
+  font-size: 30px;
+  color: #353332;
+}
+
+#order-header .menu-icons #open-menu-icon i:hover {
+  color: #FB7806;
+}
+
+#order-header .menu-icons #close-menu-icon {
+  display: none;
+  margin: 50px 13px 0 90%;
+}
+
+#order-header .menu-icons #close-menu-icon i {
+  cursor: pointer;
+  font-size: 30px;
+  color: #353332;
+}
+
+#order-header .menu-icons #close-menu-icon i:hover {
+  color: #FB7806;
+}
+
 #order-header #side-nav-links .nav-item {
   font-size: 15px;
 }
@@ -214,10 +250,6 @@ body {
   margin-left: 20%;
   max-width: 80%;
   overflow-x: hidden;
-}
-
-#for-main-content .cart-icons-lg {
-  float: right;
 }
 
 #for-main-content .cart-icons-lg img:hover {
@@ -329,17 +361,22 @@ body {
 }
 
 #for-main-content #article-side-bar-order .cart-icons {
-  position: relative;
-  right: -120px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-right: 30px;
+  background-color: #ffffff;
+  z-index: 10;
 }
 
 #for-main-content #article-side-bar-order .cart-icons img:hover {
-  background: #f5f1f1;
+  background: #f6f4f4;
   cursor: pointer;
 }
 
 #for-main-content #article-side-bar-order .what-is-new, #for-main-content #article-side-bar-order .recent-orders {
-  margin: 70px 0 35px 0;
+  position: relative;
+  margin: 160px 0 35px 0;
 }
 
 #for-main-content #article-side-bar-order .what-is-new p, #for-main-content #article-side-bar-order .recent-orders p {
@@ -393,6 +430,28 @@ body {
   /* Footer Section */
   #footer .navbar-brand-footer-image {
     width: 50% !important;
+  }
+  #order-header {
+    width: 100%;
+    z-index: 100;
+    height: 100%;
+    background-color: transparent;
+    margin-top: 0 !important;
+  }
+  #order-header #open-menu-icon {
+    display: block !important;
+  }
+  #order-header #close-menu-icon {
+    display: none !important;
+  }
+  #order-header nav {
+    display: none;
+  }
+  #order-header nav .bg-img {
+    display: none;
+  }
+  #for-main-content {
+    margin-left: 0;
   }
 }
 
