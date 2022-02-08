@@ -211,18 +211,27 @@ body {
 }
 
 #for-main-content {
-  margin-left: 250px !important;
-  position: relative;
-  width: 80%;
+  margin-left: 20%;
+  max-width: 80%;
+  overflow-x: hidden;
 }
 
-#main-content-order .welcome-user input:focus {
+#for-main-content .cart-icons-lg {
+  float: right;
+}
+
+#for-main-content .cart-icons-lg img:hover {
+  background: #f5f1f1;
+  cursor: pointer;
+}
+
+#for-main-content #main-content-order .welcome-user input:focus {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-#main-content-order .masked-image {
+#for-main-content #main-content-order .masked-image {
   background-color: #FB7806;
   background-image: url("/assets/pepper.png");
   background-repeat: no-repeat;
@@ -234,13 +243,13 @@ body {
   transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
 }
 
-#main-content-order .masked-image button:focus {
+#for-main-content #main-content-order .masked-image button:focus {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-#main-content-order .masked-image:hover {
+#for-main-content #main-content-order .masked-image:hover {
   -webkit-transform: scale(1.01, 1.02);
           transform: scale(1.01, 1.02);
   -webkit-transition: -webkit-transform 0.5s ease-in;
@@ -249,14 +258,14 @@ body {
   transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
 }
 
-#main-content-order .customize-meal img {
+#for-main-content #main-content-order .customize-meal img {
   border-radius: 50%;
   border: 5px solid #FB7806;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
-#main-content-order .customize-meal img:hover {
+#for-main-content #main-content-order .customize-meal img:hover {
   border: 10px solid #FB7806;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -264,48 +273,48 @@ body {
           transform: scale(1.2);
 }
 
-#main-content-order .customize-meal a:focus {
+#for-main-content #main-content-order .customize-meal a:focus {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-#main-content-order .view-all-meals a {
+#for-main-content #main-content-order .view-all-meals a {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
-#main-content-order .view-all-meals a:hover {
+#for-main-content #main-content-order .view-all-meals a:hover {
   color: #FB7806 !important;
   text-decoration: underline !important;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
-#main-content-order .view-all-meals .custom-meal {
+#for-main-content #main-content-order .view-all-meals .custom-meal {
   border-radius: 30px;
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
 }
 
-#main-content-order .view-all-meals .custom-meal span {
+#for-main-content #main-content-order .view-all-meals .custom-meal span {
   color: #FB7806 !important;
 }
 
-#main-content-order .view-all-meals .custom-meal:hover {
+#for-main-content #main-content-order .view-all-meals .custom-meal:hover {
   background-color: #FB7806;
   color: #ffff;
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
 }
 
-#main-content-order .view-all-meals .custom-meal:hover span {
+#for-main-content #main-content-order .view-all-meals .custom-meal:hover span {
   color: #ffff !important;
   border-radius: 20%;
   cursor: pointer;
 }
 
-#main-content-order .view-all-meals .custom-meal:hover img {
+#for-main-content #main-content-order .view-all-meals .custom-meal:hover img {
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
@@ -314,8 +323,38 @@ body {
           transform: scale(1.05);
 }
 
-#side-bar-order {
+#for-main-content #article-side-bar-order {
+  position: relative;
   background-color: rgba(240, 239, 239, 0.3);
+}
+
+#for-main-content #article-side-bar-order .cart-icons {
+  position: relative;
+  right: -120px;
+}
+
+#for-main-content #article-side-bar-order .cart-icons img:hover {
+  background: #f5f1f1;
+  cursor: pointer;
+}
+
+#for-main-content #article-side-bar-order .what-is-new, #for-main-content #article-side-bar-order .recent-orders {
+  margin: 70px 0 35px 0;
+}
+
+#for-main-content #article-side-bar-order .what-is-new p, #for-main-content #article-side-bar-order .recent-orders p {
+  background-color: #FFF9F4;
+  padding: 10px 5px !important;
+}
+
+#for-main-content #article-side-bar-order button {
+  border: 1px solid #FB7806;
+  color: #FB7806;
+}
+
+#for-main-content #article-side-bar-order button:hover {
+  background-color: #FB7806;
+  color: #ffff;
 }
 
 /* Media Queries */
