@@ -9,11 +9,7 @@ closeMenu.addEventListener('click', hideNavbar);
 function displayNavbar(){
     orderHeader.style.backgroundColor = "rgb(251, 251, 251, 1)";
     navbar.style.display = "block";
-    if(openMenu.style.display==="block"){
-        openMenu.style.display = "none";
-        closeMenu.style.display = "block";
-    }
-    // displayOrHideProps(openMenu, closeMenu);
+    displayOrHideProps(openMenu, closeMenu);
 }
 
 function hideNavbar(){
