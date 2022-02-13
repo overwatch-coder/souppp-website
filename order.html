@@ -14,8 +14,12 @@
     <header id="order-header" class="mt-2 pt-2">
 
         <div style="cursor: pointer;" class="menu-icons">
-            <span id="open-menu-icon"><i class="bi bi-list"></i></span>
-            <span id="close-menu-icon"><i class="bi bi-x-lg"></i></span>
+            <span id="open-menu-icon" class="d-block d-md-none">
+                <i class="bi bi-list"></i>
+            </span>
+            <span id="close-menu-icon" class="d-none">
+                <i class="bi bi-x-lg"></i>
+            </span>
         </div>
 
         <nav class="navbar navbar-light mt-2 pt-3 mx-4" id="navbar">
@@ -58,34 +62,41 @@
            <!-- End of Side-Navbar Section -->
 
            <!-- Main Content Section -->
-    <div class="container-fluid" id="for-main-content">
+    <div class="container" id="for-main-content">
 
-        <!-- <div class="cart-icons-lg pt-5 mt-3 d-block d-md-none">
-            <img src="/assets/Group 26.png" alt="cart">
-            <img class="ms-4" src="/assets/Group 27.png" alt="notification">
-        </div> -->
-
+        <section class="cart-and-welcome-section">
+            <div class="row justify-content-around">
+                <div class="col-10 col-md-8">
+                    <div class="row welcome-user justify-content-start justify-content-md-between">
+                        <div class="col-11 col-md-6">
+                            <h2 class="fw-normal fs-4">Welcome Helen</h2>
+                        </div>
+                        <div class="col-9 col-md-5">
+                            <form action="#">
+                                <div class="input-group">
+                                    <input type="search" name="search" placeholder="Search" class="form-control">
+                                    <button href="#" class="input-group-text" style="background-color: #FB7806;">
+                                        <i class="text-light bi bi-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                     </div>
+                </div>
+                <div class="col-5 col-md-4">
+                    <div class="cart-icons pt-5 mt-3">
+                        <img src="/assets/Group 26.png" alt="cart">
+                        <img class="ms-4" src="/assets/Group 27.png" alt="notification">
+                    </div>  
+                </div>
+            </div>  
+        </section>
+        
         <div class="row justify-content-center justify-content-md-around">
            <div class="col-10 col-md-8 mt-3 pt-5" id="main-content-order">
                <main>
-                <div class="row welcome-user justify-content-start justify-content-md-between">
-                    <div class="col-10 col-md-6">
-                        <h2 class="fw-normal">Welcome Helen</h2>
-                    </div>
-                    <div class="col-8 col-md-5">
-                        <form action="#">
-                            <div class="input-group">
-                                <input type="search" name="search" placeholder="Search" class="form-control">
-                                <button href="#" class="input-group-text" style="background-color: #FB7806;">
-                                    <i class="text-light bi bi-search"></i>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                 </div>
-
-                 <section class="container masked-image mt-5">
-                    <div class="row container justify-content-between">
+                 <section class="masked-image mt-5">
+                    <div class="row align-items-center justify-content-between container justify-content-between">
                         <div class="col-5 col-md-6 g-0 mt-3 w-100" style="border-radius: 30px;">
                             <p class="fs-2 text-light fw-bold mt-2">20% Off</p>
                             <p class="text-light small" style="font-size: 13px !important;">All Orders above $300 this weekened</p>
@@ -94,8 +105,8 @@
                     </div>
                  </section>
 
-                <section class="container mt-5 pt-4 pb-3 customize-meal">
-                     <div class="row justify-content-between">
+                <section class="mt-5 pt-4 pb-3 customize-meal">
+                     <div class="container row justify-content-between align-items-center justify-content-between">
                         <div class="col-4">
                             <img src="/assets/food.png" alt="food" class="img-fluid">
                         </div>
@@ -108,12 +119,12 @@
                 </section>
 
                    <section class="container mt-5 pt-3 pb-5 view-all-meals">
-                       <div class="d-flex flex-column flex-md-row  justify-content-md-between justify-content-center">
+                       <div class="d-flex flex-column flex-md-row  justify-content-md-between justify-content-center align-items-center justify-content-between">
                             <h4 class="fs-5 fw-600">Custom</h4>
                             <a href="#" class="fw-light text-dark text-decoration-none">View All</a>
                        </div>
-                       <div class="row g-1 container justify-content-between mt-3">
-                           <div class="col-10 col-sm-8 col-md-4 custom-meal pb-3 mb-3 shadow">
+                       <div class="d-flex flex-column flex-md-row g-1 container align-items-center justify-content-between mt-3">
+                           <div class="col-10 col-sm-10 col-md-4 custom-meal pb-3 mb-3 shadow">
                                <div class="position-relative">
                                     <img src="/assets/femoree-kn_ANxnwCQ0-unsplash 2.png" alt="meal" class="w-100">
                                      <i class="text-light position-absolute end-0 me-4 mt-2 bi bi-heart"></i>
@@ -128,7 +139,7 @@
                             </div>
                            </div>
 
-                           <div class="col-10 col-sm-8 col-md-4 custom-meal pb-3 mb-3 shadow">
+                           <div class="col-10 col-sm-10 col-md-4 custom-meal pb-3 mb-3 shadow">
                                <div class="position-relative">
                                     <img src="/assets/femoree-kn_ANxnwCQ0-unsplash 2.png" alt="meal" class="w-100">
                                      <i class="text-light position-absolute end-0 me-4 mt-2 bi bi-heart"></i>
@@ -143,7 +154,7 @@
                                 </div>
                            </div>
 
-                           <div class="col-10 col-sm-8 col-md-4 custom-meal pb-3 mb-3 shadow">
+                           <div class="col-10 col-sm-10 col-md-4 custom-meal pb-3 mb-3 shadow">
                                <div class="position-relative">
                                     <img src="/assets/femoree-kn_ANxnwCQ0-unsplash 2.png" alt="meal" class="w-100">
                                     <i class="text-light position-absolute end-0 me-4 mt-2 bi bi-heart"></i>
@@ -166,12 +177,6 @@
            <!-- Article Section -->
            <div class="col-10 col-md-3">
                <article id="article-side-bar-order">
-
-                <div class="cart-icons pt-5 mt-3">
-                    <img src="/assets/Group 26.png" alt="cart">
-                    <img class="ms-4" src="/assets/Group 27.png" alt="notification">
-                </div>
-
                 <div class="what-is-new">
                     <h6>What’s New on Our Blog</h6>
                     <p class="small mt-3"><a href="#" class="text-decoration-none text-dark">Why Vegetables are good for the eyes...</a></p>
