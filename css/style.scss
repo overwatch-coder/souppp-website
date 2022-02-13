@@ -117,13 +117,11 @@
 
         #open-menu-icon{
             margin: 10px 10px 0 20px;
-            display: none;
            @include menuIcons($orangeColor);
         }
 
         #close-menu-icon{
-            display: none;
-            margin: 50px 13px 0 90%;
+            margin: 30px 20px 0 90%;
             @include menuIcons($orangeColor);
         }
 
@@ -149,23 +147,31 @@
     margin-left: 20%;
     max-width: 100%-20%;
     overflow-x: hidden;
-
-    .cart-icons-lg{
-        img{
-            &:hover{
-                background: rgb(245, 241, 241);
-                cursor: pointer
-            }
-        }
-    }
-
-    #main-content-order{
+    .cart-and-welcome-section{
         .welcome-user{
+            margin-top: 70px;
             input{
                 @include onFocus();
             }
         }
-
+    
+        .cart-icons{
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 30px;
+            background-color: #ffffff;
+            z-index: 10;
+            img{
+                &:hover{
+                    background: rgb(246, 244, 244);
+                    cursor: pointer
+                }
+            }
+        }
+    }
+    
+    #main-content-order{
     .masked-image{
         background-color: $orangeColor;
         background-image: url("/assets/pepper.png");
@@ -236,29 +242,19 @@
 #article-side-bar-order{
     position: relative;
     background-color: rgba(240, 239, 239, 0.3);
-
-    .cart-icons{
-        position: fixed;
-        top: 0;
-        right: 0;
-        margin-right: 30px;
-        background-color: #ffffff;
-        z-index: 10;
-        img{
-            &:hover{
-                background: rgb(246, 244, 244);
-                cursor: pointer
-            }
-        }
-    }
-
     .what-is-new, .recent-orders{
         position: relative;
-        margin: 160px 0 35px 0;
         p{
             background-color: #FFF9F4;
             padding: 10px 5px !important;
         }
+    }
+
+    .what-is-new{
+        margin: 160px 0 35px 0;
+    }
+    .recent-orders{
+        margin: 40px 0 35px 0;
     }
 
     button{
