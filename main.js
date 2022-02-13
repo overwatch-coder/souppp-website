@@ -19,6 +19,9 @@ function hideNavbar(){
 }
 
 function displayOrHideProps(param1, param2) {
-    param1.style.display = "none !important";
-    param2.style.display = "block !important";
+    param1.classList.remove('d-block');
+    param1.classList.add('d-none');
+
+    param2.classList.remove('d-none');
+    param2.classList.add('d-block');
 }
