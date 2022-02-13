@@ -186,48 +186,52 @@ body {
 
 /* For Order.html */
 /* Side Nav-Bar */
+.menu-icons {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.menu-icons #open-menu-icon {
+  margin: 10px 10px 0 20px;
+}
+
+.menu-icons #open-menu-icon i {
+  cursor: pointer;
+  font-size: 30px;
+  color: #353332;
+}
+
+.menu-icons #open-menu-icon i:hover {
+  color: #FB7806;
+}
+
+.menu-icons #close-menu-icon {
+  margin: 30px 20px 0 80%;
+}
+
+.menu-icons #close-menu-icon i {
+  cursor: pointer;
+  font-size: 30px;
+  color: #353332;
+}
+
+.menu-icons #close-menu-icon i:hover {
+  color: #FB7806;
+}
+
 #order-header {
   width: 20%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   background-color: rgba(240, 239, 239, 0.4);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   overflow-x: hidden;
-}
-
-#order-header .menu-icons {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-#order-header .menu-icons #open-menu-icon {
-  margin: 10px 10px 0 20px;
-}
-
-#order-header .menu-icons #open-menu-icon i {
-  cursor: pointer;
-  font-size: 30px;
-  color: #353332;
-}
-
-#order-header .menu-icons #open-menu-icon i:hover {
-  color: #FB7806;
-}
-
-#order-header .menu-icons #close-menu-icon {
-  margin: 30px 20px 0 90%;
-}
-
-#order-header .menu-icons #close-menu-icon i {
-  cursor: pointer;
-  font-size: 30px;
-  color: #353332;
-}
-
-#order-header .menu-icons #close-menu-icon i:hover {
-  color: #FB7806;
+  z-index: 50;
 }
 
 #order-header #side-nav-links .nav-item {
@@ -436,8 +440,9 @@ body {
     width: 50% !important;
   }
   #order-header {
-    width: 100%;
-    z-index: 100;
+    width: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
     height: 100%;
     background-color: transparent;
     margin-top: 0 !important;

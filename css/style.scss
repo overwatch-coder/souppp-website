@@ -101,32 +101,34 @@
 /* For Order.html */
 
 /* Side Nav-Bar */
+.menu-icons{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    #open-menu-icon{
+        margin: 10px 10px 0 20px;
+       @include menuIcons($orangeColor);
+       
+    }
+
+    #close-menu-icon{
+        margin: 30px 20px 0 80%;
+        @include menuIcons($orangeColor);
+    }
+
+}
+
 #order-header{
     width: 20%;
+    transition: 0.5s;
     background-color: rgba(240, 239, 239, 0.4);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     overflow-x: hidden;
-
-    .menu-icons{
-        position: relative;
-        top: 0;
-        left: 0;
-
-        #open-menu-icon{
-            margin: 10px 10px 0 20px;
-           @include menuIcons($orangeColor);
-        }
-
-        #close-menu-icon{
-            margin: 30px 20px 0 90%;
-            @include menuIcons($orangeColor);
-        }
-
-    }
-    
+    z-index: 50;
     #side-nav-links{
         .nav-item{
             font-size: 15px;

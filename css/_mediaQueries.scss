@@ -45,8 +45,8 @@
 
     // Order html &css
     #order-header{
-        width: 100%;
-        z-index: 100;
+        width: 0;
+        transition: 0.5s;
         height: 100%;
         background-color: transparent;
         margin-top: 0 !important;
