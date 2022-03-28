@@ -1,3 +1,4 @@
+
 // Variable declarations
 let openMenu = document.getElementById('open-menu-icon');
 let closeMenu = document.getElementById('close-menu-icon');
@@ -10,6 +11,7 @@ closeMenu.addEventListener('click', hideNavbar);
 window.addEventListener('resize', changeWidth);
 
 // Adding functions
+
 function displayNavbar(){
     changeWidth(); 
     orderHeader.style.backgroundColor = "rgb(251, 251, 251, 1)";  
