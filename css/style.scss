@@ -162,12 +162,13 @@
             top: 0;
             right: 0;
             margin-right: 30px;
-            background-color: #ffffff;
+            background-color: $whiteColor;
             z-index: 10;
             img{
                 &:hover{
-                    background: rgb(246, 244, 244);
-                    cursor: pointer
+                    background-color: rgb(233, 228, 228);
+                    cursor: pointer;
+                    clip-path: circle(50% at center);
                 }
             }
         }
@@ -264,13 +265,17 @@
         color: $orangeColor;
         &:hover{
             background-color: $orangeColor;
-            color: #ffff;
+            color: $whiteColor;
         }
     }
 }
 
 }
 
+.active-link{
+    color: $orangeColor !important;
+    font-weight: bold !important;
+}
 
 // Customize.html
 #add-item-section{
@@ -289,11 +294,40 @@
         }
     }
 
+    .search-item{
+        input{
+            @include onFocus();
+            &:focus{
+                border-color: $orangeColor;
+            }
+        }
+    }
+
+    .button-item{
+        @include onFocus();
+        background-color: $orangeColor !important;
+        color: $whiteColor !important;
+        &:hover{
+            background-color: $orangeHover !important;
+            i{
+                color: $whiteColor !important;
+            }
+        }
+    }
+
     .select-item{
         .quantity-select{
             span{
                 &:nth-child(odd){
+                    &:hover{
+                        color: $orangeColor !important;
+                    }
                 cursor: pointer;
+                }
+
+                &:nth-child(even){
+                    background-color: #585968 !important;
+                    color: $whiteColor;
                 }
             }
         }
