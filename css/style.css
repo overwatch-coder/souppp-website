@@ -402,6 +402,27 @@ body {
   color: #ffff;
 }
 
+#add-item-section .add-general {
+  cursor: pointer;
+}
+
+#add-item-section .add-general:hover {
+  background-color: #c8640b;
+  color: #ffff !important;
+}
+
+#add-item-section .add-item {
+  background-color: #FB7806;
+}
+
+#add-item-section .add-item:hover {
+  background-color: #c8640b;
+}
+
+#add-item-section .select-item .quantity-select span:nth-child(odd) {
+  cursor: pointer;
+}
+
 /* Media Queries */
 @media screen and (max-width: 760px) {
   /* Navbar Section */

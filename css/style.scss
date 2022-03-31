@@ -193,7 +193,7 @@
     .customize-meal{
         img{
             border-radius: 50%; 
-            border: 5px solid#FB7806;
+            border: 5px solid #FB7806;
             transition: all 0.5s ease-in-out;
             &:hover{
                 border: 10px solid #FB7806;
@@ -268,8 +268,36 @@
         }
     }
 }
+
 }
 
 
+// Customize.html
+#add-item-section{
+    .add-general{
+        cursor: pointer;
+        &:hover{
+            background-color: $orangeHover;
+            color: $whiteColor !important;
+        }
+    }
+
+    .add-item{
+        background-color: $orangeColor;
+        &:hover{
+            background-color: $orangeHover;
+        }
+    }
+
+    .select-item{
+        .quantity-select{
+            span{
+                &:nth-child(odd){
+                cursor: pointer;
+                }
+            }
+        }
+    }
+}
 
 @import "mediaQueries";
