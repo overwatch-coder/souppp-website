@@ -34,7 +34,7 @@
                     </li>
                     <li class="nav-item d-flex flex-row mb-4">
                         <img src="/assets/order (2).png" alt="order">
-                        <a href="order.html" class="nav-link text-dark ms-2 fw-light">Order</a>
+                        <a href="order.html" class="active-link nav-link text-dark ms-2 fw-light" style="color: #FB7806 !important;">Order</a>
                     </li>
                     <li class="nav-item d-flex flex-row mb-4">
                         <img src="/assets/favourite-svgrepo-com 1.svg" alt="Favourite">
@@ -82,23 +82,24 @@
            <!-- End of Main Content Section -->
            <div class="col-10 col-md-8" id="add-item-section">
                 <div class="d-flex justify-content-between">
-                    <span class="add-item add-general text-light mx-md-3 mx-lg-0 py-3 px-4 rounded-3">Add Soup</span>
-                    <span class="text-muted add-general mx-md-3 mx-lg-0 py-3 px-4 rounded-3">Add Meat</span>
-                    <span class="text-muted add-general mx-md-3 mx-lg-0 py-3 px-4 rounded-3">Add Fish</span>
-                    <span class="text-muted add-general mx-md-3 mx-lg-0 py-3 px-4 rounded-3">Add Side Dishes</span>
+                    <span class="add-item add-soup add-general text-light mx-md-3 mx-lg-0 py-3 px-4 rounded-3">Add Soup</span>
+                    <span class="text-muted add-meat add-general mx-md-3 mx-lg-0 py-3 px-4 rounded-3">Add Meat</span>
+                    <span class="text-muted add-fish add-general mx-md-3 mx-lg-0 py-3 px-4 rounded-3">Add Fish</span>
+                    <span class="text-muted add-side-dish add-general mx-md-3 mx-lg-0 py-3 px-4 rounded-3">Add Side Dishes</span>
                 </div>
 
                 <div class="search-item mt-4">
                     <form action="#">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Enter soup">
-                            <button class="px-4 py-3 rounded-3 input-group-text" style="background-color: #FB7806;"><i class="text-light bi bi-search"></i></button>
+                            <input id="search" name="search" type="text" class="form-control" placeholder="Enter soup">
+                            <button class="px-4 py-3 button-item rounded-3 input-group-text"><i class="text-light bi bi-search"></i></button>
                         </div>
                     </form>
                 </div>
 
                 <div class="select-item mt-3 pt-3">
-                    <table class="fw-light table table-borderless">
+                    <!-- Add Soup -->
+                    <table id="add-soup" class="d-none fw-light table table-borderless">
                         <thead class="text-center">
                           <tr class="text-muted font-mono">
                             <th scope="col" class="text-start">Soup</th>
@@ -119,12 +120,12 @@
                                         <span class="mx-1 fs-5">+</span>
                                     </td>
                                     <td class="text-center price-given">
-                                        <span class="fs-5">8,000</span>
+                                        <span class="fs-5">0</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="form-check">
-                                        <input class="mx-1 form-check-input" type="checkbox" name="soup" id="edikaikong">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="soup" id="edikaikong" checked>
                                         <label class="form-check-label" for="edikaikong">Edikaikong</label>
                                     </td>
                                     <td class="text-center quantity-select">
@@ -138,7 +139,7 @@
                                 </tr>
                                 <tr>
                                     <td class="form-check">
-                                        <input class="mx-1 form-check-input" type="checkbox" name="soup" id="egusi">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="soup" id="egusi" checked>
                                         <label class="form-check-label" for="egusi">Egusi Soup</label>
                                     </td>
                                     <td class="text-center quantity-select">
@@ -157,17 +158,314 @@
                                     </td>
                                     <td class="text-center quantity-select">
                                         <span class="mx-1 fs-5">-</span>
-                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">1</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">0</span>
                                         <span class="mx-1 fs-5">+</span>
                                     </td>
                                     <td class="text-center price-given">
-                                        <span class="fs-5">2,000</span>
+                                        <span class="fs-5">0</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="form-check">
                                         <input class="mx-1 form-check-input" type="checkbox" name="soup" id="riro">
                                         <label class="form-check-label" for="riro">Efo Riro</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">0</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">0</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="soup" id="banga" checked>
+                                        <label class="form-check-label" for="banga">Banga Soup</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">1</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">500</span>
+                                    </td>
+                                </tr>
+                            </form>
+                        </tbody>
+                      </table>
+
+                      <!-- Add Meat -->
+                      <table id="add-meat" class="d-none fw-light table table-borderless">
+                        <thead class="text-center">
+                          <tr class="text-muted font-mono">
+                            <th scope="col" class="text-start">Meat</th>
+                            <th scope="col">Quantity (Litres)</th>
+                            <th scope="col">Price(#)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <form action="#">
+                                <tr>
+                                    <td class="form-check meat-select">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="meat" id="chicken" checked>
+                                        <label class="form-check-label" for="chicken">Chicken</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">1</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">300</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="meat" id="beef" checked>
+                                        <label class="form-check-label" for="beef">Beef</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">1</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">1,000</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="meat" id="goat">
+                                        <label class="form-check-label" for="goat">Goat Meat</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">0</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">0</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="meat" id="cow">
+                                        <label class="form-check-label" for="cow">Cow Meat</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">0</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">0</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="meat" id="turkey">
+                                        <label class="form-check-label" for="turkey">Turkey</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">0</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">0</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="emat" id="snail" checked>
+                                        <label class="form-check-label" for="snail">Snail</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">1</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">500</span>
+                                    </td>
+                                </tr>
+                            </form>
+                        </tbody>
+                      </table>
+
+                      <!-- Add Fish -->
+                      <table id="add-fish" class="d-none fw-light table table-borderless">
+                        <thead class="text-center">
+                          <tr class="text-muted font-mono">
+                            <th scope="col" class="text-start">Fish</th>
+                            <th scope="col">Quantity (Litres)</th>
+                            <th scope="col">Price(#)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <form action="#">
+                                <tr>
+                                    <td class="form-check fish-select">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="fish" id="tilapia">
+                                        <label class="form-check-label" for="tilapia">Tilapia</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">0</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">0</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="fish" id="croaka" checked>
+                                        <label class="form-check-label" for="croaka">Croaka</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">2</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">5,000</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="fish" id="cat" checked>
+                                        <label class="form-check-label" for="cat">Cat Fish</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">1</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">1,500</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="fish" id="titus">
+                                        <label class="form-check-label" for="titus">Titus (Mackerel)</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">0</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">0</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="fish" id="kote">
+                                        <label class="form-check-label" for="kote">Kote</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">0</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">0</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="fish" id="panla">
+                                        <label class="form-check-label" for="panla">Panla</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">0</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">0</span>
+                                    </td>
+                                </tr>
+                            </form>
+                        </tbody>
+                      </table>
+
+                      <!-- Add Side Dishes -->
+                      <table id="add-side-dish" class="d-none fw-light table table-borderless">
+                        <thead class="text-center">
+                          <tr class="text-muted font-mono">
+                            <th scope="col" class="text-start">Soup</th>
+                            <th scope="col">Quantity (Litres)</th>
+                            <th scope="col">Price(#)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <form action="#">
+                                <tr>
+                                    <td class="form-check soup-select">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="side-dish" id="eba" checked>
+                                        <label class="form-check-label" for="eba">Eba</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">1</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">8,000</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="side-dish" id="amala">
+                                        <label class="form-check-label" for="amala">Amala</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">0</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">0</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="side-dish" id="semo">
+                                        <label class="form-check-label" for="semo">Semo</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">0</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">0</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="side-dish" id="fufu">
+                                        <label class="form-check-label" for="fufu">Fufu</label>
+                                    </td>
+                                    <td class="text-center quantity-select">
+                                        <span class="mx-1 fs-5">-</span>
+                                        <span class="mx-1 fs-5 bg-secondary rounded-3 px-2 py-1">0</span>
+                                        <span class="mx-1 fs-5">+</span>
+                                    </td>
+                                    <td class="text-center price-given">
+                                        <span class="fs-5">0</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-check">
+                                        <input class="mx-1 form-check-input" type="checkbox" name="side-dish" id="tuwo" checked>
+                                        <label class="form-check-label" for="tuwo">Tuwo</label>
                                     </td>
                                     <td class="text-center quantity-select">
                                         <span class="mx-1 fs-5">-</span>
@@ -180,8 +478,8 @@
                                 </tr>
                                 <tr>
                                     <td class="form-check">
-                                        <input class="mx-1 form-check-input" type="checkbox" name="soup" id="banga">
-                                        <label class="form-check-label" for="banga">Banga Soup</label>
+                                        <input class="mx-1 form-check-input" type="checkbox" name="side-dish" id="yam">
+                                        <label class="form-check-label" for="yam">Pounded Yam</label>
                                     </td>
                                     <td class="text-center quantity-select">
                                         <span class="mx-1 fs-5">-</span>
@@ -189,14 +487,34 @@
                                         <span class="mx-1 fs-5">+</span>
                                     </td>
                                     <td class="text-center price-given">
-                                        <span class="fs-5">3,000</span>
+                                        <span class="fs-5">0</span>
                                     </td>
                                 </tr>
                             </form>
                         </tbody>
                       </table>
                 </div>
-                
+
+                <!-- Pagination -->
+                <nav aria-label="pagination">
+                    <div class="pagination justify-content-between">
+                        <ul class="pagination justify-content-between">
+                            <li class="page-item" role="button">
+                              <i class="bi text-muted bi-chevron-left page-link"></i>
+                            </li>
+      
+                            <li class="rounded-3 page-item" aria-current="page"><a class="button-item page-link" href="#">1</a></li>
+
+                            <li class="page-item rounded-3"><a class="text-muted page-link" href="#">2</a></li>
+                            <li class="page-item" role="button">
+                              <i class="bi text-muted bi-chevron-right page-link"></i>
+                            </li>
+                        </ul>
+                        <div>
+                            <button class="form-control button-item">Next</button>
+                        </div>
+                    </div>
+                </nav>
            </div>
            
            <!-- Article Section -->
