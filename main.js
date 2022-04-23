@@ -84,21 +84,18 @@ addItemsBtn.map(item => {
 
 function addOrRemoveItem(item1, item2, item3, item4) {
     item1.classList.remove('d-none');
-    item2.classList.add('d-none');
-    item3.classList.add('d-none');
-    item4.classList.add('d-none');
+    [item2, item3, item4].map(item => item.classList.add('d-none'));
 }
 
 function displayActiveItem(item1, item2, item3, item4) {
         item1.classList.remove('text-muted');
-        item1.classList.add('add-item', 'text-light');
-
-        item2.classList.remove('add-item', 'text-light');
+        ['add-item', 'text-light'].map(item => item1.classList.add(item));
+        ['add-item', 'text-light'].map(item => {
+            item2.classList.remove(item);
+            item3.classList.remove(item);
+            item4.classList.remove(item);
+        });
         item2.classList.add('text-muted');
-
-        item3.classList.remove('add-item', 'text-light');
         item3.classList.add('text-muted');
-
-        item4.classList.remove('add-item', 'text-light');
         item4.classList.add('text-muted');
 }
